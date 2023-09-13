@@ -9,8 +9,11 @@
 <body>
     <%- include('./partials/navbar'); %>
     <ul>
-        <% notas.forEach((nota) => { %>
-            <%- include('./nota', {nota}); %>
+        <% listaDeNotas.forEach((nota) => { %>
+            <img src="<%= nota.image %>" alt="">
+            <h1><%= nota.author %></h1>
+            <span><%= nota.content %></span>
+            <span><b><%= nota.createdAt %></b></span>
         <% }); %>
     </ul>
     <script src="./js/main.js"></script>

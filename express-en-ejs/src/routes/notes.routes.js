@@ -1,9 +1,14 @@
-const { Router } = require('express')
-const { createNote, listNotes } = require('../controllers/notes.controllers')
+const { Router } = require("express");
+const {
+  createNote,
+  listNotes,
+  updateNote,
+} = require("../controllers/notes.controllers");
 
-const router = Router()
+const router = Router();
 
-router.get('/', listNotes)
-router.post('/', createNote)
+router.get("/", listNotes);
+router.post("/", createNote);
+router.post("/:id", updateNote);
 
-module.exports = router
+module.exports = router;
